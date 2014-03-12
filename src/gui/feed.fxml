@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-background-color 0xfff1ccff?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gui.FeedController">
+  <children>
+    <HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="48.0" prefWidth="694.0" spacing="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Hyperlink fx:id="lnkHome" contentDisplay="LEFT" onAction="#lnkHomeHndl" text="Home">
+          <HBox.margin>
+            <Insets />
+          </HBox.margin>
+        </Hyperlink>
+        <TextField fx:id="txtSearch" onAction="#txtSearchHndl" prefWidth="200.0" promptText="Type a name... i.e : John Doe" />
+        <Hyperlink fx:id="lnkPeople" onAction="#lnkPeopleHndl" text="People" />
+        <Hyperlink fx:id="lnkProfile" onAction="#lnkProfileHndl" text="Profile" visited="false" />
+        <Hyperlink fx:id="lnkSettings" onAction="#lnkSettingsHndl" text="Settings" visited="false" />
+        <Hyperlink fx:id="lnkExit" onAction="#lnkExitHndl" text="Logout" />
+      </children>
+      <padding>
+        <Insets bottom="10.0" left="6.0" right="6.0" top="10.0" />
+      </padding>
+    </HBox>
+    <GridPane alignment="CENTER" prefHeight="539.0" prefWidth="786.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="59.0">
+      <children>
+        <GridPane alignment="TOP_CENTER" gridLinesVisible="true" maxHeight="-Infinity" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="0" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+          <children>
+            <ListView fx:id="lvFeed" maxHeight="1.7976931348623157E308" minHeight="-Infinity" orientation="VERTICAL" prefHeight="514.0" prefWidth="444.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS" />
+            <HBox id="HBox" alignment="TOP_CENTER" spacing="5.0" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+              <children>
+                <Label text="Feed" />
+              </children>
+            </HBox>
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints maxHeight="270.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="524.0" minHeight="10.0" prefHeight="514.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <VBox alignment="TOP_CENTER" prefHeight="539.0" prefWidth="342.0" spacing="12.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <GridPane alignment="TOP_RIGHT" gridLinesVisible="true" prefHeight="247.0" prefWidth="332.0">
+              <children>
+                <HBox alignment="TOP_LEFT" prefHeight="39.0" prefWidth="332.0" spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+                  <children>
+                    <ImageView fx:id="imgProfile" fitHeight="34.0" fitWidth="45.33333333333333" pickOnBounds="true" preserveRatio="true" />
+                    <Hyperlink fx:id="lnkStatusCount" maxWidth="1.7976931348623157E308" onAction="#lnkProfileHndl" prefWidth="280.0" text="S.C:" />
+                  </children>
+                </HBox>
+                <TextArea fx:id="txtStatus" prefWidth="200.0" promptText="Shout! Shout! Let it all out!" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <children>
+                    <Button fx:id="btnSend" mnemonicParsing="false" onAction="#send" text="Send" />
+                  </children>
+                </HBox>
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="-1.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="205.0" minHeight="10.0" prefHeight="177.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="206.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </VBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="222.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="444.0" minWidth="10.0" prefWidth="444.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="500.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

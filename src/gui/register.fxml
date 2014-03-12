@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gui.RegisterController">
+  <children>
+    <GridPane id="GridPane" gridLinesVisible="false" hgap="6.0" layoutY="114.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="109.0" prefWidth="572.0" vgap="6.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+      <children>
+        <Label fx:id="lblName" text="Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label fx:id="lblEmail" text="E-Mail" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="txtName" prefWidth="200.0" promptText="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="txtEmail" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <GridPane id="GridPane" GridPane.columnIndex="1" GridPane.rowIndex="4">
+          <children>
+            <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#register" text="Register" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#cancel" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+        <Label fx:id="lblPasswd" text="Password" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label fx:id="lblPasswdVerify" text="Password(verify)" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <PasswordField fx:id="txtPasswd" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <PasswordField fx:id="txtPasswdVerify" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label fx:id="lblError" text="" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="362.0" minWidth="10.0" prefWidth="244.0" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="331.0" minWidth="10.0" prefWidth="322.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="22.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="21.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>

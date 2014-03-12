@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gui.LoginController">
+  <children>
+    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="21.0" />
+    <TextField fx:id="txtUserName" layoutX="225.0" layoutY="231.0" prefWidth="285.0" />
+    <PasswordField fx:id="txtPassword" layoutX="225.0" layoutY="260.0" prefWidth="285.0" />
+    <Button fx:id="btnLogin" defaultButton="true" layoutX="433.0" mnemonicParsing="false" prefWidth="77.0" text="Login" AnchorPane.topAnchor="305.0" />
+    <Button fx:id="btnRegister" alignment="CENTER" layoutX="225.0" layoutY="312.0" mnemonicParsing="false" onAction="#registerBtnHndl" text="Register" />
+    <Label labelFor="$txtUserName" layoutX="92.5" layoutY="234.0" text="Username" />
+    <Label alignment="CENTER" labelFor="$txtPassword" layoutX="98.0" layoutY="270.0" text="Password" />
+    <Label fx:id="lblLoginFailed" layoutX="225.0" layoutY="192.0" prefWidth="-1.0" text="" textFill="#ff3d00">
+      <font>
+        <Font name="System Bold" size="13.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

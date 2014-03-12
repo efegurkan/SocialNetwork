@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <jdbc>
+        <url>jdbc:postgresql://localhost:5432/SocialNetworkDB</url>
+        <driver>org.postgresql.Driver</driver>
+        <username>postgres</username>
+        <password></password>
+    </jdbc>
+</config>

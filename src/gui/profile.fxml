@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gui.ProfileController">
+  <children>
+    <GridPane alignment="TOP_CENTER" prefHeight="612.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <HBox alignment="TOP_CENTER" minHeight="-1.0" prefHeight="-1.0" prefWidth="-1.0" spacing="6.0" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+          <children>
+            <ImageView fx:id="ivProfile" fitHeight="104.99998474121094" fitWidth="139.99996886590506" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" prefHeight="105.0" prefWidth="660.0">
+              <children>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                  <children>
+                    <Label fx:id="lblName" text="NAME">
+                      <font>
+                        <Font name="System Bold" size="26.0" />
+                      </font>
+                    </Label>
+                    <Label fx:id="lblEmail" text="email" />
+                  </children>
+                </VBox>
+                <VBox id="VBox" alignment="CENTER" spacing="5.0">
+                  <children>
+                    <ToggleButton id="btnfollow" fx:id="tglFollow" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#tglFollowHndl" text="Follow" />
+                    <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#btnCancelHndl" text="Go Back" />
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+          </children>
+          <padding>
+            <Insets bottom="6.0" left="12.0" right="12.0" top="12.0" />
+          </padding>
+        </HBox>
+        <ListView fx:id="lvProfileFeed" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="305.0" minHeight="10.0" prefHeight="119.0" valignment="TOP" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="550.0" minHeight="10.0" prefHeight="493.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>
